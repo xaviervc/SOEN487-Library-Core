@@ -24,10 +24,27 @@ public class Book implements Serializable {
     private Long id;
     private String title;
     private String description;
-    private int isbn;
+    private Long isbn;
     private String author;
     private String publisher;
     
+    
+    public Book(){
+        this.id = null;
+        this.title = null;
+        this.description = null;
+        this.author=null;
+        this.publisher=null;
+    }
+    
+    public Book(Long id, String title, String description, Long isbn, String author, String publisher){
+        this.id=id;
+        this.title=title;
+        this.description=description;
+        this.isbn = isbn;
+        this.author = author;
+        this.publisher=publisher;
+    }
 
     public Long getId() {
         return id;
@@ -78,11 +95,11 @@ public class Book implements Serializable {
         this.description = description;
     }
 
-    public int getIsbn() {
+    public Long getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(int isbn) {
+    public void setIsbn(Long isbn){
         this.isbn = isbn;
     }
 
