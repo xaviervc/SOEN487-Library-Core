@@ -28,7 +28,18 @@ public class Book implements Serializable {
     private String author;
     private String publisher;
     
-
+    public Book(){
+        
+    }
+    
+    public Book(String description, String title, int isbn, String author, String publisher){
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.isbn = isbn;
+        this.publisher = publisher;
+    }
+    
     public Long getId() {
         return id;
     }
@@ -59,7 +70,7 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return "";
+        return "Book ID: "+id+" Book Title: "+title;
     }
 
     public String getTitle() {
